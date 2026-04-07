@@ -315,7 +315,7 @@ body {
 .about {
   position: relative;
   background-color: #DDEBD4;
-  overflow: hidden;
+  z-index: 1;
 }
 
 .about__frame {
@@ -458,6 +458,7 @@ body {
   left: 659px;
   top: 2605px;
   width: 608px;
+  z-index: 1;
 }
 
 .about__bottom-img img {
@@ -466,6 +467,22 @@ body {
   height: auto;
 }
 
+/* --- Wave (aboutからvisionへの繋ぎ) --- */
+.about__wave {
+  position: absolute;
+  left: 0;
+  bottom: -300px;
+  width: 100%;
+  height: 528px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.about__wave img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
 /* ==========================================================================
    Vision
@@ -474,6 +491,7 @@ body {
   position: relative;
   background-color: #009844;
   overflow: hidden;
+  margin-top: -487px;
 }
 
 .vision__frame {
