@@ -21,5 +21,8 @@
   "homepage": "https://github.com/okuyamatakashi-beready/new-little#readme",
   "devDependencies": {
     "sass": "^1.99.0"
+  },
+  "dependencies": {
+    "swiper": "^12.1.3"
   }
 }
