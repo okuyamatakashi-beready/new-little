@@ -12,16 +12,14 @@ function scaleHero() {
 scaleHero();
 window.addEventListener('resize', scaleHero);
 
-if (typeof Swiper !== 'undefined') {
-  var courseSwiper = new Swiper('.course-detail__swiper', {
-    loop: true,
-    speed: 600,
-    navigation: {
-      prevEl: '.course-detail__nav--prev',
-      nextEl: '.course-detail__nav--next',
-    },
-  });
-}
+var courseSwiper = new Swiper('.course-detail__swiper', {
+  loop: true,
+  speed: 600,
+  navigation: {
+    prevEl: '.course-detail__nav--prev',
+    nextEl: '.course-detail__nav--next',
+  },
+});
 
 // Scroll animation
 const fadeObserver = new IntersectionObserver(function (entries) {
