@@ -98,6 +98,11 @@ img {
   padding: 0 20px;
 }
 
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -106,7 +111,7 @@ img {
   width: 100%;
   height: $header-height;
   background-color: #fff;
-  border-bottom: 4px solid $color-green;
+  border-bottom: none;
   z-index: 100;
 
   &__inner {
@@ -162,6 +167,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    animation: spin 20s linear infinite;
   }
 
   &__cta-text {
@@ -314,7 +320,7 @@ img {
     justify-content: center;
     width: 91px;
     height: 44px;
-    background-color: $color-green;
+    background-color: #369DCB;
     color: #fff;
     font-family: $font-family-kiwi;
     font-size: 33px;
@@ -429,7 +435,7 @@ img {
     background-color: #fff;
     border-radius: 150px;
     text-align: center;
-    padding: 65px 0 0;
+    padding: 45px 0 0;
 
     &--large {
       height: 420px;
@@ -551,7 +557,7 @@ img {
   &__heading-main {
     display: block;
     font-family: $font-family-mplus2;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 108px;
     line-height: 1;
     margin-top: 10px;
@@ -606,7 +612,7 @@ img {
   }
 
   &__card-title {
-    font-family: $font-family-mplus2;
+    font-family: $font-family-kiwi;
     font-weight: 800;
     font-size: 32px;
     line-height: 48px;
@@ -615,7 +621,7 @@ img {
 
   &__card-text {
     font-family: $font-family-kiwi;
-    font-size: 16px;
+    font-size: 19px;
     line-height: 37px;
     color: $color-secondary;
     margin-top: 12px;
@@ -697,7 +703,7 @@ img {
 
   &__main {
     font-family: $font-family-mplus2;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 91px;
     line-height: 109px;
     color: $color-red;
@@ -734,11 +740,22 @@ img {
 
   &__swiper {
     overflow: hidden;
+
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+
+    .swiper-slide {
+      height: auto;
+    }
   }
 
   &__slide-item {
     position: relative;
     padding-top: 90px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   &__bg {
@@ -807,7 +824,7 @@ img {
     align-items: center;
     justify-content: center;
     padding: 6px 20px;
-    background-color: $color-green;
+    background-color: #369DCB;
     color: #fff;
     font-family: $font-family-rounded;
     font-weight: 500;
@@ -967,6 +984,29 @@ img {
     transform: translate(-50%, -50%);
     width: 23px;
     height: 43px;
+  }
+
+  /* --- Pagination dots --- */
+  &__pagination {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 30px;
+
+    .swiper-pagination-bullet {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #C0C0C0;
+      opacity: 1;
+      margin: 0;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #369DCB;
+    }
   }
 
   /* --- Pricing --- */
@@ -1198,6 +1238,7 @@ img {
     width: 745px;
     max-width: 100%;
     height: 177px;
+    margin-bottom: 323px;
     text-decoration: none;
     transition: transform 0.3s ease;
 
@@ -1232,7 +1273,7 @@ img {
    ========================================================================== */
 .voice {
   position: relative;
-  padding: 80px 0 120px;
+  padding: 80px 0 334px;
   overflow: hidden;
 
   &__bg {
@@ -1306,6 +1347,7 @@ img {
     display: flex;
     align-items: baseline;
     justify-content: center;
+    margin-top: -30px;
   }
 
   &__satisfaction-value {
@@ -1333,8 +1375,8 @@ img {
     font-size: 20px;
     line-height: 1.2;
     color: $color-dark;
-    margin-top: 10px;
-    margin-bottom: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   /* --- Grid (from little site) --- */
@@ -1346,7 +1388,7 @@ img {
     align-items: flex-start;
     gap: 30px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 114px auto 0;
     padding: 0 30px;
   }
 
@@ -1404,11 +1446,12 @@ img {
    ========================================================================== */
 .qa {
   width: 100%;
-  padding: 100px 0;
+  padding: 215px 0 200px;
   background-color: #c89409;
 
   &__container {
-    max-width: 960px;
+    width: 1080px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -1437,32 +1480,77 @@ img {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    width: 1080px;
+    max-width: 100%;
   }
 
   &__box {
     background-color: #fff;
-    border-radius: 15px;
-    padding: 30px 40px;
+    border-radius: 20px;
+    padding: 25px 30px;
   }
 
   &__row {
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: center;
+    gap: 16px;
 
     &--q {
-      margin-bottom: 20px;
+      cursor: pointer;
+      position: relative;
+      padding-right: 60px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 33px;
+        height: 33px;
+        border: 1px solid #989898;
+        background:
+          linear-gradient(#989898, #989898) center / 17px 2px no-repeat,
+          linear-gradient(#989898, #989898) center / 2px 17px no-repeat;
+        transition: background 0.3s ease;
+      }
+
+      &.is-open::after {
+        background: linear-gradient(#989898, #989898) center / 17px 2px no-repeat;
+      }
     }
 
     &--a {
+      align-items: flex-start;
       margin-top: 20px;
+    }
+  }
+
+  &__line {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0 0;
+  }
+
+  &__answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+
+    &.is-open {
+      max-height: 500px;
     }
   }
 
   &__icon {
     flex-shrink: 0;
-    width: 56px;
-    height: 56px;
+    width: 52px;
+    height: 52px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -1479,14 +1567,13 @@ img {
   }
 
   &__text {
-    line-height: 2;
     margin: 0;
-    padding-top: 12px;
 
     &--q {
       font-family: $font-family-rounded;
       font-weight: 500;
       font-size: 28px;
+      line-height: 1.4;
       color: #000;
     }
 
@@ -1494,14 +1581,10 @@ img {
       font-family: $font-family-rounded;
       font-weight: 500;
       font-size: 20px;
+      line-height: 2;
       color: $color-dark;
+      padding-top: 4px;
     }
-  }
-
-  &__line {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 0;
   }
 }
 
@@ -1510,7 +1593,7 @@ img {
    ========================================================================== */
 .school {
   width: 100%;
-  padding: 100px 0 0 0;
+  padding: 116px 0 0 0;
 
   &__container {
     max-width: 900px;
@@ -1541,7 +1624,7 @@ img {
   &__subtitle {
     text-align: center;
     margin-top: 38px;
-    margin-bottom: 50px;
+    margin-bottom: 130px;
 
     &::after {
       content: "";
@@ -1566,6 +1649,7 @@ img {
     display: flex;
     align-items: baseline;
     justify-content: center;
+    margin-top: -30px;
   }
 
   &__subtitle-num {
@@ -1679,21 +1763,19 @@ img {
 
   &__row {
     display: table-row;
-
-    &:nth-child(odd) {
-      background-color: #FCF8E3;
-    }
-
-    &:nth-child(even) {
-      background-color: #fff;
-    }
+    background-color: #FFFDE5;
   }
 
   &__td {
     display: table-cell;
     padding: 20px 15px;
     vertical-align: middle;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #55B032;
+    border-right: 1px dotted #55B032;
+
+    &:last-child {
+      border-right: none;
+    }
 
     &--name {
       font-weight: 500;
@@ -1790,7 +1872,8 @@ img {
 
   &__inner {
     text-align: center;
-    padding: 60px 20px;
+    padding: 60px 20px 0;
+    margin-bottom: 47px;
   }
 
   &__text {
@@ -1846,7 +1929,7 @@ img {
     position: relative;
     width: 526px;
     height: 329px;
-    margin: 80px auto 0;
+    margin: 126px auto 0;
   }
 
   &__photo-deco {
@@ -2506,28 +2589,33 @@ img {
 
     &__box {
       padding: 15px;
+      border-radius: 12px;
     }
 
     &__row {
       gap: 10px;
+
+      &--q {
+        padding-right: 40px;
+
+        &::after {
+          width: 26px;
+          height: 26px;
+          background-size: 13px 2px, 2px 13px;
+        }
+
+        &.is-open::after {
+          background-size: 13px 2px;
+        }
+      }
     }
 
     &__icon {
       width: 30px;
       height: 30px;
-
-      &--q {
-        font-size: 16px;
-      }
-
-      &--a {
-        font-size: 16px;
-      }
     }
 
     &__text {
-      padding-top: 4px;
-
       &--q {
         font-size: 14px;
       }

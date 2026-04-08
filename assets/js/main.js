@@ -19,6 +19,10 @@ var courseSwiper = new Swiper('.course-detail__swiper', {
     prevEl: '.course-detail__nav--prev',
     nextEl: '.course-detail__nav--next',
   },
+  pagination: {
+    el: '.course-detail__pagination',
+    clickable: true,
+  },
 });
 
 // Scroll animation
@@ -51,6 +55,22 @@ accordionTriggers.forEach(function (trigger) {
       this.classList.add('is-open');
       body.style.height = body.scrollHeight + 'px';
       body.classList.add('is-open');
+    }
+  });
+});
+
+// QA Accordion
+document.querySelectorAll('.js-qa-trigger').forEach(function (trigger) {
+  trigger.addEventListener('click', function () {
+    var answer = this.nextElementSibling;
+    if (this.classList.contains('is-open')) {
+      this.classList.remove('is-open');
+      answer.style.maxHeight = '0';
+      answer.classList.remove('is-open');
+    } else {
+      this.classList.add('is-open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      answer.classList.add('is-open');
     }
   });
 });
