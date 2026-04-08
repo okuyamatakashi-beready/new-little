@@ -1,0 +1,25 @@
+{
+  "name": "new-little",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass assets/scss/style.scss assets/css/style.css",
+    "watch": "sass --watch assets/scss/style.scss assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okuyamatakashi-beready/new-little.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/okuyamatakashi-beready/new-little/issues"
+  },
+  "homepage": "https://github.com/okuyamatakashi-beready/new-little#readme",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}
