@@ -710,28 +710,6 @@ img {
   line-height: 36px;
   color: #231815;
 }
-.course-detail__header-logo {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 105px;
-  height: 105px;
-  flex-shrink: 0;
-}
-.course-detail__header-logo-circle {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.course-detail__header-logo-letter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 55px;
-  height: auto;
-}
 .course-detail__header-title {
   display: flex;
   align-items: center;
@@ -740,11 +718,11 @@ img {
   margin-top: 20px;
 }
 .course-detail__header-title h3 {
-  font-family: "M PLUS 2", sans-serif;
-  font-weight: 800;
-  font-size: 80px;
   line-height: 1;
-  color: #000;
+}
+.course-detail__header-title-svg {
+  height: 105px;
+  width: auto;
 }
 .course-detail__header-target {
   display: flex;
@@ -1461,6 +1439,7 @@ img {
 }
 .school__accordion {
   margin-bottom: 80px;
+  font-family: "Kiwi Maru", serif;
 }
 .school__accordion-header {
   background-color: #55b032;
@@ -1555,9 +1534,19 @@ img {
   font-size: 18px;
   text-align: center;
 }
+.school__td--name-small {
+  font-size: 14px;
+  line-height: 1.4;
+}
 .school__td--address {
   font-size: 14px;
   line-height: 1.6;
+}
+.school__course-note {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #E60012;
+  font-weight: 500;
 }
 .school__course-list {
   list-style: none;
@@ -1565,47 +1554,18 @@ img {
   margin: 0;
 }
 .school__course-item {
-  font-size: 12px;
-  font-weight: 500;
   display: flex;
   align-items: center;
   margin-bottom: 5px;
 }
-.school__course-item::before {
-  content: "";
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 8px;
-  flex-shrink: 0;
-}
-.school__course-item--conv::before {
-  background-image: url("../images/school__course-item--conv.png");
-}
-.school__course-item--eiken::before {
-  background-image: url("../images/school__course-item--eiken.png");
-}
-.school__course-item--global::before {
-  background-image: url("../images/school__course-item--global.png");
+.school__course-item img {
+  display: block;
+  height: 22px;
+  width: auto;
 }
 .school__course-item--conv-disabled, .school__course-item--eiken-disabled, .school__course-item--global-disabled {
-  color: #ccc;
-}
-.school__course-item--conv-disabled::before, .school__course-item--eiken-disabled::before, .school__course-item--global-disabled::before {
   filter: grayscale(100%);
-  opacity: 0.6;
-}
-.school__course-item--conv-disabled::before {
-  background-image: url("../images/school__course-item--conv.png");
-}
-.school__course-item--eiken-disabled::before {
-  background-image: url("../images/school__course-item--eiken.png");
-}
-.school__course-item--global-disabled::before {
-  background-image: url("../images/school__course-item--global.png");
+  opacity: 0.4;
 }
 .school__note {
   text-align: right;
@@ -2000,15 +1960,8 @@ img {
   .course-detail__header-title {
     gap: 8px;
   }
-  .course-detail__header-title h3 {
-    font-size: 20px;
-  }
-  .course-detail__header-logo-circle {
-    width: 30px;
-    height: 30px;
-  }
-  .course-detail__header-logo-letter {
-    width: 40px;
+  .course-detail__header-title-svg {
+    height: 52px;
   }
   .course-detail__header-target {
     gap: 8px;
@@ -2312,13 +2265,8 @@ img {
   .school__td--address {
     font-size: 12px;
   }
-  .school__course-item {
-    font-size: 10px;
-  }
-  .school__course-item::before {
-    width: 18px;
+  .school__course-item img {
     height: 18px;
-    margin-right: 5px;
   }
   .school__note {
     font-size: 10px;
