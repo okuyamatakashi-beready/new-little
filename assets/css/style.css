@@ -2010,6 +2010,7 @@ img.pc-only {
   .hero {
     overflow: hidden;
     background-color: #fff;
+    padding-top: 20px;
   }
   .hero__bg-green {
     display: none;
@@ -2892,3 +2893,5 @@ img.pc-only {
     height: 30px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
