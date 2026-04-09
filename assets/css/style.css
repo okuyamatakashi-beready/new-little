@@ -431,8 +431,8 @@ img.pc-only {
   position: relative;
   z-index: 1;
   color: #fff;
-  font-family: "M PLUS 2", sans-serif;
-  font-weight: 700;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 800;
   font-size: 73px;
   line-height: 1.2;
   letter-spacing: 0.005em;
@@ -1253,8 +1253,8 @@ img.pc-only {
   position: relative;
   z-index: 1;
   color: #fff;
-  font-family: "M PLUS 2", sans-serif;
-  font-weight: 700;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 800;
   font-size: 73px;
   line-height: 1.2;
   letter-spacing: 0.005em;
@@ -1534,15 +1534,15 @@ img.pc-only {
   margin: 0;
 }
 .qa__text--q {
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "Kiwi Maru", serif;
   font-weight: 500;
   font-size: 28px;
   line-height: 1.4;
   color: #000;
 }
 .qa__text--a {
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 500;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
   font-size: 20px;
   line-height: 2;
   color: #231815;
@@ -1790,7 +1790,7 @@ img.pc-only {
 }
 .school-cta__text {
   font-family: "Kiwi Maru", serif;
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 400;
   line-height: 1.8;
   color: #009844;
@@ -1825,8 +1825,8 @@ img.pc-only {
   position: relative;
   z-index: 1;
   color: #fff;
-  font-family: "M PLUS 2", sans-serif;
-  font-weight: 700;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 800;
   font-size: 73px;
   line-height: 1.2;
   letter-spacing: 0.005em;
@@ -2401,6 +2401,10 @@ img.pc-only {
   .course-detail {
     padding: 30px 0;
   }
+  .course-detail__card-wrap {
+    width: 100%;
+    margin: 0 auto;
+  }
   .course-detail__section-title {
     font-size: 25px;
     margin-bottom: 15px;
@@ -2455,7 +2459,7 @@ img.pc-only {
     background-color: #fffde6;
     text-align: left;
     border-radius: 20px 20px 0 0;
-    margin: 47px 15px 0 15px;
+    margin: 47px 35px 0 35px;
   }
   .course-detail__desc p {
     display: inline;
@@ -2463,7 +2467,7 @@ img.pc-only {
     text-align: left;
   }
   .course-detail__card-wrap {
-    width: 100%;
+    width: 90%;
     padding: 0 15px;
   }
   .course-detail__card {
@@ -2514,12 +2518,17 @@ img.pc-only {
     border-radius: 20px;
     font-size: 14px;
     gap: 8px;
+    margin-bottom: 30px;
     flex-direction: column;
+  }
+  .course-detail__feature-item + .course-detail__feature-item {
+    margin-top: -15px;
   }
   .course-detail__feature-num {
     width: 36px;
     height: 36px;
     font-size: 22px;
+    margin-top: -27px;
   }
   .course-detail__feature-label {
     width: 100%;
@@ -2883,5 +2892,3 @@ img.pc-only {
     height: 30px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
