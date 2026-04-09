@@ -72,6 +72,14 @@ img {
   padding: 0 20px;
 }
 
+.sp-only {
+  display: none;
+}
+
+.pc-only {
+  display: inline;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -196,11 +204,14 @@ img {
   height: 1355px;
   mix-blend-mode: multiply;
 }
-.hero__photo-main img {
+.hero__photo-main img.hero__photo-main-pc {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.hero__photo-main img.hero__photo-main-sp {
+  display: none;
 }
 .hero {
   /* --- Left photo (alphabet blocks child) --- */
@@ -235,6 +246,9 @@ img {
   display: block;
   width: 100%;
   height: auto;
+}
+.hero__ttl-sp {
+  display: none;
 }
 .hero {
   /* --- Campaign badge (mv-ad.png) --- */
@@ -500,6 +514,7 @@ img {
 .vision__heading {
   text-align: center;
   color: #fff;
+  margin-bottom: 90px;
 }
 .vision__heading-sub {
   display: block;
@@ -1824,6 +1839,12 @@ img {
    Mobile Responsive (max-width: 768px)
    ========================================================================== */
 @media screen and (max-width: 768px) {
+  .sp-only {
+    display: inline;
+  }
+  .pc-only {
+    display: none;
+  }
   /* --- Header --- */
   .header {
     height: 50px;
@@ -1850,75 +1871,276 @@ img {
   /* --- Hero --- */
   .hero {
     overflow: hidden;
+    background-color: #fff;
+  }
+  .hero__bg-green {
+    display: none;
+  }
+  .hero__frame {
+    position: relative;
+    width: 100%;
+    height: auto;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero__white-box {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    overflow: visible;
+    background-color: #fff;
+    padding-top: 10px;
+  }
+  .hero__photo-main {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    mix-blend-mode: normal;
+  }
+  .hero__photo-main img.hero__photo-main-pc {
+    display: none;
+  }
+  .hero__photo-main img.hero__photo-main-sp {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .hero__photo-left {
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: -20px;
+    width: 65%;
+    max-width: 280px;
+    height: auto;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+  .hero__photo-left img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .hero__ttl {
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    width: 250px;
+    max-width: 85%;
+    height: auto;
+    z-index: 2;
+  }
+  .hero__ttl img.hero__ttl-pc {
+    display: none;
+  }
+  .hero__ttl img.hero__ttl-sp {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .hero__ad {
+    position: absolute;
+    left: 15px;
+    bottom: 205px;
+    width: 140px;
+    height: 140px;
+    z-index: 3;
+    top: auto;
+  }
+  .hero__ad img {
+    width: 100%;
+    height: auto;
+  }
+  .hero__abc {
+    display: block;
+    position: absolute;
+    right: 18%;
+    bottom: -15px;
+    width: 70px;
+    height: auto;
+    z-index: 3;
+    top: auto;
+  }
+  .hero__abc img {
+    width: 100%;
+    height: auto;
+  }
+  .hero__target {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    background-color: #FCCF00;
+    padding: 30px 15px 20px;
+    gap: 10px;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .hero__target-label {
+    width: auto;
+    height: auto;
+    padding: 4px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+  .hero__target-text {
+    font-size: 18px;
+  }
+  .hero__cta {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0 20px 40px;
+    display: block;
+    background-color: #FCCF00;
+    border-radius: 0;
+  }
+  .hero__cta-bg {
+    display: none;
+  }
+  .hero__cta-text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #009844;
+    color: #fff;
+    font-size: 26px;
+    border: 3px solid #fff;
+    border-radius: 25px;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+  }
+  .hero__cta-text::after {
+    content: "";
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: translateY(-50%) rotate(45deg);
   }
   /* --- About --- */
   .about {
     padding-bottom: 40px;
   }
   .about__inner {
-    padding: 0 30px;
-    padding-top: 80px;
+    padding: 0 20px;
+    padding-top: 60px;
   }
   .about__heading {
-    font-size: 24px;
-    line-height: 1.4;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .about__heading span {
+    display: block;
   }
   .about__logo {
     margin-top: 20px;
+    text-align: center;
   }
   .about__logo img {
     width: 200px;
+    height: 80px;
+    display: inline-block;
   }
   .about__card {
+    position: relative;
     width: 100%;
-    margin: 60px auto 0;
+    margin: 35px auto 0;
   }
   .about__card:first-of-type {
-    margin-top: 40px;
+    margin-top: 35px;
   }
   .about__card-bubble {
     height: auto;
-    border-radius: 30px;
-    padding: 25px 20px;
+    border-radius: 40px;
+    padding: 35px 10px;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    z-index: 0;
   }
   .about__card-bubble--large {
-    height: auto;
+    padding-bottom: 70px;
   }
   .about__card-arrow {
-    width: 40px;
-    height: 40px;
-    margin: -30px auto 0;
+    width: 30px;
+    height: 30px;
+    margin: -15px auto 0;
+    background-color: #fff;
+    position: relative;
+    z-index: 0;
   }
   .about__card-title {
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #009844;
+    margin-bottom: 12px;
   }
   .about__card-text {
     font-size: 16px;
     line-height: 1.8;
+    text-align: center;
+    color: #000;
   }
   .about__card-img {
-    width: 120px;
-    height: 80px;
-    border-radius: 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .about__card-img img {
+    width: 85px;
+    height: 85px;
   }
   .about__card-img--right {
     right: -15px;
     top: auto;
-    bottom: -30px;
+    bottom: -20px;
   }
   .about__card-img--left {
     left: -15px;
     top: auto;
-    bottom: -30px;
+    bottom: -100px;
+    z-index: 10;
   }
   .about__bottom-img {
-    width: 110px;
-    margin: 30px auto 0;
+    width: 220px;
+    max-width: 80%;
+    margin: -60px auto 0;
+    position: relative;
+    z-index: 2;
+  }
+  .about__wave {
+    bottom: -110px;
+    height: auto;
+  }
+  .about__wave img {
+    height: 20%;
   }
   /* --- Vision --- */
   .vision {
-    padding: 80px 0 60px;
+    padding: 170px 0 24px;
   }
   .vision__heading-sub {
     font-size: 20px;
@@ -1941,7 +2163,7 @@ img {
   .vision__card {
     width: 280px;
     min-height: auto;
-    border-radius: 20px;
+    border-radius: 40px;
     padding: 40px 20px 25px;
   }
   .vision__card-num {
@@ -1960,6 +2182,7 @@ img {
   }
   .vision__card-text {
     font-size: 14px;
+    letter-spacing: -0.798px;
     line-height: 1.7;
     margin-top: 10px;
   }
@@ -1970,46 +2193,71 @@ img {
     padding: 0 20px;
   }
   .vision__bottom-img {
-    width: 109px;
+    width: 197px;
     margin: 20px auto 0;
   }
   /* --- Course Intro --- */
   .course-intro {
-    padding: 40px 0 0;
+    padding: 67px 0 0;
   }
   .course-intro__content {
     width: 100%;
-    padding: 0 40px;
+    padding: 0 20px;
+    text-align: center;
   }
   .course-intro__label {
-    font-size: 32px;
-    line-height: 38px;
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 700;
   }
   .course-intro__line {
-    width: 282px;
-    max-width: 100%;
-    margin: 15px auto;
+    width: 90%;
+    max-width: 320px;
+    border: none;
+    border-bottom: 2px solid #009844;
+    margin: 25px auto;
   }
   .course-intro__sub {
-    font-size: 20px;
-    line-height: 24px;
-    margin-top: 20px;
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 800;
+    margin-top: 30px;
   }
   .course-intro__main {
-    font-size: 53px;
-    line-height: 64px;
+    font-family: "M PLUS 2", sans-serif;
+    font-weight: 800;
+    color: #E60012;
     margin-top: -5px;
+    line-height: 10px;
+    margin-bottom: 15px;
   }
   .course-intro__main em {
-    font-size: 125px;
-    line-height: 150px;
+    font-size: 150px;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: baseline;
+    letter-spacing: -0.05em;
+  }
+  .course-intro__main-tsuno {
+    font-size: 55px;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: 5px;
+  }
+  .course-intro__main-course {
+    font-size: 40px;
+    line-height: 1.2;
+    display: inline-block;
+    margin-top: 5px;
+    letter-spacing: 0.05em;
   }
   .course-intro__img {
     position: relative;
     right: auto;
     bottom: auto;
-    width: 75%;
-    margin: -20px 0 0 auto;
+    width: 40%;
+    margin: -140px -30px 0px auto;
   }
   /* --- Course Detail --- */
   .course-detail {

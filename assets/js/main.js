@@ -4,6 +4,11 @@
 function scaleHero() {
   var frame = document.querySelector('.hero__frame');
   if (!frame) return;
+  if (window.innerWidth <= 768) {
+    frame.style.transform = '';
+    frame.parentElement.style.height = '';
+    return;
+  }
   var parentWidth = frame.parentElement.clientWidth;
   var scale = parentWidth / 1920;
   frame.style.transform = 'scale(' + scale + ')';

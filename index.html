@@ -13,7 +13,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260409">
 </head>
 
 <body>
@@ -46,13 +46,15 @@
       <!-- White rounded box with photos -->
       <div class="hero__white-box">
         <div class="hero__photo-main">
-          <img src="assets/images/mv-photo-main.png" alt="英語を楽しむ子どもたち">
+          <img src="assets/images/mv-photo-main.png" alt="英語を楽しむ子どもたち" class="hero__photo-main-pc">
+          <img src="assets/images/mv-photo-main-sp.png" alt="英語を楽しむ子どもたち" class="hero__photo-main-sp">
         </div>
         <div class="hero__photo-left">
           <img src="assets/images/mv-photo-left.png" alt="">
         </div>
         <div class="hero__ttl">
-          <img src="assets/images/mv-ttl.png" alt="英語って楽しい！">
+          <img src="assets/images/mv-ttl.png" alt="英語って楽しい！" class="hero__ttl-pc">
+          <img src="assets/images/mv-ttl-sp.png" alt="英語って楽しい！" class="hero__ttl-sp">
         </div>
       </div>
       <!-- Ad badge (白ボックスの外 - はみ出すため) -->
@@ -94,6 +96,9 @@
           <p class="about__card-text">小さいうちから英語にふれ、<br>楽しく学んでほしいと考える保護者の方が増えています。</p>
         </div>
         <div class="about__card-arrow"></div>
+        <div class="about__card-img about__card-img--right">
+          <img src="assets/images/about-img01.png" alt="">
+        </div>
       </div>
 
       <!-- Card 2 -->
@@ -103,8 +108,8 @@
           <p class="about__card-text">「わからない」が続くと自信をなくすこともあり、最初の体験が大切です。</p>
         </div>
         <div class="about__card-arrow"></div>
-        <div class="about__card-img about__card-img--right">
-          <img src="assets/images/about-img01.png" alt="">
+        <div class="about__card-img about__card-img--left">
+          <img src="assets/images/about-img02.png" alt="">
         </div>
       </div>
 
@@ -115,16 +120,13 @@
           <p class="about__card-text">小さな成功体験の積み重ねが、子どもたちの自信につながります。</p>
         </div>
         <div class="about__card-arrow"></div>
-        <div class="about__card-img about__card-img--left">
-          <img src="assets/images/about-img02.png" alt="">
-        </div>
       </div>
 
       <!-- Card 4 -->
       <div class="about__card js-fade-in">
         <div class="about__card-bubble about__card-bubble--large">
           <p class="about__card-title">Littleは…<br>使える英語を育てる教室です!</p>
-          <p class="about__card-text">遊び・会話・体験を通して英語に親しみながら、<br>「英語って楽しい！」気持ちを育てます。</p>
+          <p class="about__card-text">遊び・会話・体験を通して<br class="sp-only"> 英語に親しみながら、<br>「英語って楽しい！」気持ちを育てます。</p>
         </div>
       </div>
 
@@ -153,7 +155,8 @@
           <p class="vision__card-label">Fun First！</p>
           <p class="vision__card-title">英語って楽しい</p>
           <p class="vision__card-text">
-            はじめに育てたいのは、<br>「英語が好き！」という気持ち。<br>遊び・表現・コミュニケーションを通して、<br>子どもたちは自然に英語と出会います。<br>日本語でのびのび育ってきた<br>思考力をそのままに、<br>英語を新しい遊び道具として<br>楽しみます。
+            はじめに育てたいのは、<br>「英語が好き！」という気持ち。<br>遊び・表現・コミュニケーションを<br class="sp-only">
+            通して、<br>子どもたちは自然に英語と出会います。<br>日本語でのびのび育ってきた<br>思考力をそのままに、<br>英語を新しい遊び道具として<br>楽しみます。
           </p>
         </div>
 
@@ -169,14 +172,15 @@
           <span class="vision__card-num">3</span>
           <p class="vision__card-title">未来基準</p>
           <p class="vision__card-text">
-            英検®や受験はゴールではなく通過点。<br>AIやテクノロジーが<br>進化する時代においても、<br>自分の考えを持ち、伝え、他者と学び合える。<br>テストや資格のための英語ではなく、<br>未来で"使い続けられる英語力"を<br>大切にしています。
+            英検®や受験はゴールではなく通過点。<br>AIやテクノロジーが<br>進化する時代においても、<br>自分の考えを持ち、伝え、<br class="sp-only">
+            他者と学び合える。<br>テストや資格のための英語ではなく、<br>未来で"使い続けられる英語力"を<br>大切にしています。
           </p>
         </div>
       </div>
 
       <div class="vision__summary">
         <p>「英語って楽しい」を入口に、</p>
-        <p>段階的に未来の選択肢を広げていきます。</p>
+        <p>段階的に未来の選択肢を<br class="sp-only"> 広げていきます。</p>
       </div>
 
       <div class="vision__bottom-img">
@@ -192,7 +196,10 @@
         <p class="course-intro__label">コースのご案内</p>
         <hr class="course-intro__line">
         <p class="course-intro__sub">個性に合わせて選べる</p>
-        <p class="course-intro__main"><em>3</em>つのコース</p>
+        <p class="course-intro__main">
+          <em>3</em><span class="course-intro__main-tsuno">つの</span><br class="sp-only">
+          <span class="course-intro__main-course">コース</span>
+        </p>
         <hr class="course-intro__line">
       </div>
     </div>
@@ -235,7 +242,8 @@
                 <th class="course-detail__card-label">コースの特長</th>
                 <td class="course-detail__card-content">
                   <div class="course-detail__diagram">
-                    <img src="assets/images/cource-slide01.png" alt="多彩なアプローチで1ヶ月間、楽しく繰り返し練習！">
+                    <img src="assets/images/cource-slide01.png" alt="多彩なアプローチで1ヶ月間、楽しく繰り返し練習！" class="pc-only">
+                    <img src="assets/images/cource-slide01-sp.png" alt="多彩なアプローチで1ヶ月間、楽しく繰り返し練習！" class="sp-only">
                   </div>
                 </td>
               </tr>
