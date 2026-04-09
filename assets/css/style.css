@@ -162,6 +162,88 @@ img.pc-only {
   text-align: center;
 }
 
+.header__hamburger {
+  display: none;
+}
+
+/* ==========================================================================
+   Global Nav Overlay
+   ========================================================================== */
+.gnav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(192, 216, 168, 0.95);
+  z-index: 2000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gnav-overlay.is-open {
+  display: flex;
+  opacity: 1;
+}
+.gnav-overlay__nav {
+  width: 85%;
+  max-width: 330px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px 0;
+}
+.gnav-overlay__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.gnav-overlay__item {
+  border-bottom: 1px solid #ccc;
+}
+.gnav-overlay__item:last-child {
+  border-bottom: none;
+}
+.gnav-overlay__link {
+  display: block;
+  text-align: center;
+  padding: 18px 20px;
+  font-family: "Kiwi Maru", serif;
+  font-size: 18px;
+  color: #231815;
+  text-decoration: none;
+}
+.gnav-overlay__close-bottom {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.gnav-overlay__close-bottom-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #231815;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #231815;
+  line-height: 1;
+}
+.gnav-overlay__close-bottom-text {
+  font-family: "Kiwi Maru", serif;
+  font-size: 16px;
+  color: #231815;
+  letter-spacing: 0.05em;
+}
+
 /* ==========================================================================
    Hero
    ========================================================================== */
@@ -1682,7 +1764,8 @@ img.pc-only {
   }
   .school__row {
     padding: 20px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #55b032;
+    background-color: #fff;
   }
   .school__td {
     padding: 10px 0;
@@ -1858,16 +1941,25 @@ img.pc-only {
   img.pc-only {
     display: none !important;
   }
+  body {
+    padding-top: 50px;
+  }
   /* --- Header --- */
   .header {
-    height: 50px;
+    height: 85px;
     border-bottom-width: 2px;
+    border-bottom: 3px solid #55B032;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-bottom: 10px;
   }
   .header__inner {
     padding: 0 10px;
   }
   .header__logo img {
-    width: 160px;
+    width: 174px;
   }
   .header__cta {
     gap: 6px;
@@ -1875,11 +1967,44 @@ img.pc-only {
     top: 6px;
   }
   .header__cta-btn {
-    width: 56px;
-    height: 54px;
+    width: 75px;
+    height: 72px;
   }
   .header__cta-text {
     font-size: 10px;
+  }
+  .header__hamburger {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 40px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: fixed;
+    right: 15px;
+    top: 105px;
+    z-index: 9999;
+  }
+  .header__hamburger-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #231815;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .header__hamburger.is-open .header__hamburger-line:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  .header__hamburger.is-open .header__hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  .header__hamburger.is-open .header__hamburger-line:nth-child(3) {
+    transform: translateY(-18.5px) rotate(-45deg);
   }
   /* --- Hero --- */
   .hero {
@@ -2680,10 +2805,12 @@ img.pc-only {
     height: 14px;
   }
   .school__td--name {
-    font-size: 14px;
+    font-size: 24px;
+    margin-bottom: 0;
   }
   .school__td--address {
-    font-size: 12px;
+    font-size: 16px;
+    letter-spacing: -0.8px;
   }
   .school__course-item img {
     height: 18px;
@@ -2735,7 +2862,8 @@ img.pc-only {
     margin-bottom: 25px;
   }
   .footer__phone-img {
-    height: 20px;
+    height: 27px;
+    width: 254px;
   }
   .footer__hours {
     font-size: 9px;
