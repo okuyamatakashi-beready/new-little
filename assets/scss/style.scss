@@ -2487,7 +2487,12 @@ img.pc-only {
       &:first-of-type {
         margin-top: 35px;
       }
+
+      &--2nd {
+        z-index: 10;
+      }
     }
+
 
     &__card-bubble {
       height: auto;

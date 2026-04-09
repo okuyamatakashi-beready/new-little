@@ -2205,6 +2205,9 @@ img.pc-only {
   .about__card:first-of-type {
     margin-top: 35px;
   }
+  .about__card--2nd {
+    z-index: 10;
+  }
   .about__card-bubble {
     height: auto;
     border-radius: 80px;
