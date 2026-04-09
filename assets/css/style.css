@@ -2125,29 +2125,38 @@ img {
   }
   .course-detail__pricing {
     width: 100%;
-    margin: 15px auto 0;
+    margin: 25px auto 0;
   }
   .course-detail__pricing tr {
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
   }
   .course-detail__pricing-item {
-    width: 50%;
-    padding: 6px 8px;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .course-detail__pricing-item:nth-child(even) {
+    margin-bottom: 20px;
   }
   .course-detail__pricing-label {
-    font-size: 10px;
-    padding: 3px 8px;
+    font-size: 13px;
+    padding: 5px 24px;
+    margin: 0 auto 5px;
+    display: inline-block;
   }
   .course-detail__pricing-value {
-    font-size: 16px;
+    font-size: 26px;
+    font-weight: 700;
   }
   .course-detail__pricing-tax {
-    font-size: 9px;
+    font-size: 11px;
+    margin-left: 3px;
   }
   .course-detail__pricing-note {
     font-size: 11px;
-    padding: 5px 15px 0;
+    text-align: center;
+    padding: 0 15px;
+    margin-top: -5px;
   }
   .course-detail__nav {
     width: 35px;
