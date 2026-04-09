@@ -587,15 +587,12 @@ img.pc-only {
     position: absolute;
     width: 260px;
     height: 260px;
-    border-radius: 50%;
-    overflow: hidden;
     z-index: 2;
 
     img {
       display: block;
       width: 100%;
       height: 100%;
-      object-fit: cover;
     }
 
     &--right {
@@ -653,7 +650,7 @@ img.pc-only {
   margin-top: 0;
 
   &__inner {
-    max-width: 1200px;
+    max-width: 1360px;
     margin: 0 auto;
   }
 
@@ -696,11 +693,12 @@ img.pc-only {
 
   &__card {
     position: relative;
-    width: 371px;
+    width: 390px;
     min-height: 475px;
     background-color: #fff;
     border-radius: 30px;
-    padding: 55px 25px 30px;
+    padding: 55px 0px 30px;
+    letter-spacing: -1.5px;
     text-align: center;
     border-top: 5px solid $color-green-bright;
   }
@@ -891,8 +889,7 @@ img.pc-only {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("../images/course-bg-pattern.png") center top / 1920px auto repeat-y;
-    opacity: 0.2;
+    opacity: 0.5;
   }
 
   /* --- Header strip --- */
@@ -2494,7 +2491,7 @@ img.pc-only {
 
     &__card-bubble {
       height: auto;
-      border-radius: 40px;
+      border-radius: 80px;
       padding: 35px 10px;
       text-align: center;
       background-color: #fff;
@@ -2534,7 +2531,6 @@ img.pc-only {
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      overflow: hidden;
       z-index: 2;
 
       img {
@@ -2555,6 +2551,7 @@ img.pc-only {
         z-index: 10;
       }
     }
+
 
     &__bottom-img {
       width: 220px;
@@ -2602,7 +2599,7 @@ img.pc-only {
 
     &__card {
       width: 310px;
-      min-height: auto;
+      min-height: 330px;
       border-radius: 40px;
       padding: 40px 10px 25px;
     }
@@ -2752,6 +2749,10 @@ img.pc-only {
 
     &__bg {
       border-radius: 0;
+    }
+
+    &__bg-pattern {
+      background: url("../images/course-bg-pattern-sp.png") center top / 100% auto repeat-y;
     }
 
     &__header {
@@ -3012,6 +3013,11 @@ img.pc-only {
   .voice {
     padding: 30px 0 50px;
 
+    &::before {
+      background-image: url('../images/voice-bg-pattern-sp.png');
+      opacity: 1;
+    }
+
     &__title {
       font-size: 32px;
       padding: 0 20px;
@@ -3261,7 +3267,8 @@ img.pc-only {
     padding: 0 20px 30px;
 
     &__inner {
-      padding: 25px 10px;
+      padding: 25px 10px 0 10px;
+      margin-bottom: 0;
     }
 
     &__text {

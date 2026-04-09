@@ -529,15 +529,12 @@ img.pc-only {
   position: absolute;
   width: 260px;
   height: 260px;
-  border-radius: 50%;
-  overflow: hidden;
   z-index: 2;
 }
 .about__card-img img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 .about__card-img--right {
   right: -131px;
@@ -591,7 +588,7 @@ img.pc-only {
   margin-top: 0;
 }
 .vision__inner {
-  max-width: 1200px;
+  max-width: 1360px;
   margin: 0 auto;
 }
 .vision {
@@ -632,11 +629,12 @@ img.pc-only {
 }
 .vision__card {
   position: relative;
-  width: 371px;
+  width: 390px;
   min-height: 475px;
   background-color: #fff;
   border-radius: 30px;
-  padding: 55px 25px 30px;
+  padding: 55px 0px 30px;
+  letter-spacing: -1.5px;
   text-align: center;
   border-top: 5px solid #009844;
 }
@@ -809,8 +807,7 @@ img.pc-only {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../images/course-bg-pattern.png") center top/1920px auto repeat-y;
-  opacity: 0.2;
+  opacity: 0.5;
 }
 .course-detail {
   /* --- Header strip --- */
@@ -2210,7 +2207,7 @@ img.pc-only {
   }
   .about__card-bubble {
     height: auto;
-    border-radius: 40px;
+    border-radius: 80px;
     padding: 35px 10px;
     text-align: center;
     background-color: #fff;
@@ -2245,7 +2242,6 @@ img.pc-only {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    overflow: hidden;
     z-index: 2;
   }
   .about__card-img img {
@@ -2300,10 +2296,10 @@ img.pc-only {
     padding: 0 20px;
   }
   .vision__card {
-    width: 280px;
-    min-height: auto;
+    width: 310px;
+    min-height: 330px;
     border-radius: 40px;
-    padding: 40px 20px 25px;
+    padding: 40px 10px 25px;
   }
   .vision__card-num {
     width: 50px;
@@ -2427,6 +2423,9 @@ img.pc-only {
   }
   .course-detail__bg {
     border-radius: 0;
+  }
+  .course-detail__bg-pattern {
+    background: url("../images/course-bg-pattern-sp.png") center top/100% auto repeat-y;
   }
   .course-detail__header {
     padding: 15px 15px;
@@ -2639,6 +2638,10 @@ img.pc-only {
   .voice {
     padding: 30px 0 50px;
   }
+  .voice::before {
+    background-image: url("../images/voice-bg-pattern-sp.png");
+    opacity: 1;
+  }
   .voice__title {
     font-size: 32px;
     padding: 0 20px;
@@ -2833,7 +2836,8 @@ img.pc-only {
     padding: 0 20px 30px;
   }
   .school-cta__inner {
-    padding: 25px 10px;
+    padding: 25px 10px 0 10px;
+    margin-bottom: 0;
   }
   .school-cta__text {
     font-size: 16px;
