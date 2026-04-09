@@ -280,15 +280,15 @@ img {
     height: 516px;
     z-index: 2;
 
-    img {
+    img.hero__ttl-pc {
       display: block;
       width: 100%;
       height: auto;
     }
-  }
 
-  &__ttl-sp {
-    display: none;
+    img.hero__ttl-sp {
+      display: none;
+    }
   }
 
   /* --- Campaign badge (mv-ad.png) --- */

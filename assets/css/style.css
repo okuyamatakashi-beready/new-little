@@ -242,12 +242,12 @@ img {
   height: 516px;
   z-index: 2;
 }
-.hero__ttl img {
+.hero__ttl img.hero__ttl-pc {
   display: block;
   width: 100%;
   height: auto;
 }
-.hero__ttl-sp {
+.hero__ttl img.hero__ttl-sp {
   display: none;
 }
 .hero {
