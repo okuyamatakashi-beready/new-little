@@ -1007,6 +1007,10 @@ img.pc-only {
     background-color: #fffde5;
     vertical-align: middle;
     border-bottom: 3px solid #55B032;
+
+    p {
+      font-family: $font-family-kiwi;
+    }
   }
 
   &__card tr:last-child &__card-label,
@@ -1267,6 +1271,10 @@ img.pc-only {
     font-size: 22px;
     line-height: 1.6;
     color: $color-dark;
+
+    p {
+      font-family: $font-family-kiwi;
+    }
 
     &+& {
       margin-top: 12px;
