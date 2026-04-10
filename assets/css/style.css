@@ -918,6 +918,9 @@ img.pc-only {
   vertical-align: middle;
   border-bottom: 3px solid #55B032;
 }
+.course-detail__card-content p {
+  font-family: "Kiwi Maru", serif;
+}
 .course-detail__card tr:last-child .course-detail__card-label, .course-detail__card tr:last-child .course-detail__card-content {
   border-bottom: none;
 }
@@ -1151,6 +1154,9 @@ img.pc-only {
   font-size: 22px;
   line-height: 1.6;
   color: #231815;
+}
+.course-detail__feature-item p {
+  font-family: "Kiwi Maru", serif;
 }
 .course-detail__feature-item + .course-detail__feature-item {
   margin-top: 12px;
