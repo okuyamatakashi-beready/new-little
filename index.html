@@ -32,7 +32,7 @@
           <span class="header__cta-text">無料体験<br>受付中</span>
         </a>
         <a href="https://contact.gakken.jp/user/op_enquete.gsp?sid=1357&mid=001179Vv&hid=83vDB0Xb0_0"
-          class="header__cta-btn header__cta-btn--request">
+          class="header__cta-btn header__cta-btn--request" target="_blank">
           <img src="assets/images/btn-request.svg" alt="" class="header__cta-bg">
           <span class="header__cta-text">資料請求<br>お申し込み</span>
         </a>
@@ -60,7 +60,9 @@
       </ul>
     </nav>
     <button class="gnav-overlay__close-bottom" id="js-gnav-close-bottom">
-      <span class="gnav-overlay__close-bottom-icon">&times;</span>
+      <span class="gnav-overlay__close-bottom-icon">
+        <img src="assets/images/close-icon.svg" alt="">
+      </span>
       <span class="gnav-overlay__close-bottom-text">CLOSE</span>
     </button>
   </div>
@@ -334,7 +336,7 @@
                 <th class="course-detail__card-label">コースの特長</th>
                 <td class="course-detail__card-content">
                   <div class="course-detail__feature-list">
-                    <p class="course-detail__feature-list-head">理解→定着→実践 のステップで段階的に力を伸ばします。</p>
+                    <p class="course-detail__feature-list-head">理解→定着→実践 のステップで<br class="sp-only">段階的に力を伸ばします。</p>
                     <div class="course-detail__feature-item course-detail__feature-item--pink">
                       <span class="course-detail__feature-num">1</span>
                       <div>
@@ -421,14 +423,14 @@
                 <th class="course-detail__card-label">コースの特長</th>
                 <td class="course-detail__card-content">
                   <div class="course-detail__feature-list">
-                    <p class="course-detail__feature-list-head course-detail__feature-list-head--red">21世紀型スキル　英語力 × 思考力
+                    <p class="course-detail__feature-list-head course-detail__feature-list-head--red">21世紀型スキル<br
+                        class="sp-only">　英語力 × 思考力
                       × 表現力</p>
                     <div class="course-detail__feature-item course-detail__feature-item--pink">
                       <div class="course-detail__feature-label">
                         <p>外国人講師</p>
                         <p>×</p>
-                        <p>日本人講師の</p>
-                        <p>2名体制</p>
+                        <p>日本人講師の<br class="pc-only">２名体制</p>
                       </div>
                       <div class="course-detail__feature-desc">
                         <p>日本人講師 ／ 文法理解・学習サポート</p>
@@ -447,8 +449,7 @@
                     </div>
                     <div class="course-detail__feature-item course-detail__feature-item--yellow">
                       <div class="course-detail__feature-label">
-                        <p>プロジェクト型</p>
-                        <p>学習</p>
+                        <p>プロジェクト型<br class="pc-only">学習</p>
                       </div>
                       <div class="course-detail__feature-desc">
                         <p>実社会とつながるテーマで考える→話す→発表する→協働する</p>
@@ -505,8 +506,11 @@
       <img src="assets/images/course-star-right2.svg" alt="" class="course-detail__nav-arrow pc-only">
       <img src="assets/images/course-arrow-next-sp.svg" alt="" class="course-detail__nav-sp sp-only">
     </button>
+
     <div class="course-detail__pagination"></div>
   </section>
+
+
 
   <!-- Voice -->
   <section class="voice" id="voice">
@@ -533,7 +537,7 @@
 
     <div class="voice__grid">
       <div class="voice__col">
-        <div class="voice__item js-fade-in">
+        <div class="voice__item js-fade-in voice__item--01">
           <div class="voice__icon-wrap">
             <img src="assets/images/voice_icon_01.png" alt="保護者アイコン" class="voice__icon">
           </div>
@@ -544,7 +548,7 @@
             <p class="voice__signer">年長の保護者</p>
           </div>
         </div>
-        <div class="voice__item js-fade-in">
+        <div class="voice__item js-fade-in voice__item--04">
           <div class="voice__icon-wrap">
             <img src="assets/images/voice_icon_02.png" alt="保護者アイコン" class="voice__icon">
           </div>
@@ -557,7 +561,7 @@
         </div>
       </div>
       <div class="voice__col">
-        <div class="voice__item js-fade-in">
+        <div class="voice__item js-fade-in voice__item--02">
           <div class="voice__icon-wrap">
             <img src="assets/images/voice_icon_03.png" alt="保護者アイコン" class="voice__icon">
           </div>
@@ -566,7 +570,7 @@
             <p class="voice__signer">年長の保護者</p>
           </div>
         </div>
-        <div class="voice__item js-fade-in">
+        <div class="voice__item js-fade-in voice__item--03">
           <div class="voice__icon-wrap">
             <img src="assets/images/voice_icon_04.png" alt="保護者アイコン" class="voice__icon">
           </div>
@@ -575,7 +579,7 @@
             <p class="voice__signer">小6の保護者</p>
           </div>
         </div>
-        <div class="voice__item js-fade-in">
+        <div class="voice__item js-fade-in voice__item--05">
           <div class="voice__icon-wrap">
             <img src="assets/images/voice_icon_05.png" alt="保護者アイコン" class="voice__icon">
           </div>
@@ -1285,7 +1289,8 @@
       </div>
       <p class="footer__hours">受付／月～土曜 9:00～17:00（祝・休日を除く）</p>
       <p class="footer__address">〒141-8411 東京都品川区西五反田二丁目11番8号</p>
-      <a href="#" class="footer__privacy">&gt;プライバシーポリシーはこちらから</a>
+      <a href="https://gakken-link.co.jp/privacypolicy/" class="footer__privacy"
+        target="_blank">&gt;プライバシーポリシーはこちらから</a>
     </div>
     <div class="footer__logo">
       <img src="assets/images/gakken-logo-green.png" alt="Gakken" class="footer__logo-img">
