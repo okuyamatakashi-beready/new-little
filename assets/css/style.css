@@ -231,11 +231,11 @@ img.pc-only {
   justify-content: center;
   width: 24px;
   height: 24px;
-  border: 2px solid #231815;
-  border-radius: 50%;
-  font-size: 16px;
-  color: #231815;
-  line-height: 1;
+}
+.gnav-overlay__close-bottom-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .gnav-overlay__close-bottom-text {
   font-family: "Kiwi Maru", serif;
@@ -808,6 +808,7 @@ img.pc-only {
   width: 100%;
   height: 100%;
   opacity: 0.5;
+  background: url(../images/course-bg-pattern.png) center top/100% auto repeat-y;
 }
 .course-detail {
   /* --- Header strip --- */
@@ -1004,12 +1005,15 @@ img.pc-only {
   /* --- Pagination dots --- */
 }
 .course-detail__pagination {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 45px;
+  z-index: 2;
   display: flex;
   justify-content: center;
   gap: 14px;
-  margin-top: 30px;
+  width: 100%;
 }
 .course-detail__pagination .swiper-pagination-bullet {
   width: 22px;
@@ -2174,7 +2178,7 @@ img.pc-only {
   }
   /* --- About --- */
   .about {
-    padding-bottom: 40px;
+    padding-bottom: 100px;
   }
   .about__inner {
     padding: 0 20px;
@@ -2194,7 +2198,7 @@ img.pc-only {
   }
   .about__logo img {
     width: 200px;
-    height: 80px;
+    height: 72px;
     display: inline-block;
   }
   .about__card {
@@ -2210,7 +2214,7 @@ img.pc-only {
   }
   .about__card-bubble {
     height: auto;
-    border-radius: 80px;
+    border-radius: 60px;
     padding: 35px 10px;
     text-align: center;
     background-color: #fff;
@@ -2270,7 +2274,7 @@ img.pc-only {
     z-index: 2;
   }
   .about__wave {
-    bottom: -110px;
+    bottom: -70px;
     height: auto;
   }
   .about__wave img {
@@ -2424,6 +2428,14 @@ img.pc-only {
     padding: 20px 0;
     height: auto;
   }
+  .course-detail__pagination {
+    bottom: 30px;
+    gap: 10px;
+  }
+  .course-detail__pagination .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+  }
   .course-detail__bg {
     border-radius: 0;
   }
@@ -2462,7 +2474,8 @@ img.pc-only {
     background-color: #fffde6;
     text-align: left;
     border-radius: 20px 20px 0 0;
-    margin: 47px 35px 0 35px;
+    width: 82%;
+    margin: 47px auto 0;
   }
   .course-detail__desc p {
     display: inline;
@@ -2505,15 +2518,16 @@ img.pc-only {
   .course-detail__card tr:last-child .course-detail__card-content {
     border-bottom: none;
     border-radius: 0 0 20px 20px;
-    padding: 15px 20px 25px;
+    padding: 15px 10px 25px;
   }
   .course-detail__feature-list {
     padding: 10px 5px;
   }
   .course-detail__feature-list-head {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 30px;
     line-height: 1.5;
+    font-weight: bold;
   }
   .course-detail__feature-item {
     width: 100%;
@@ -2521,7 +2535,7 @@ img.pc-only {
     border-radius: 20px;
     font-size: 14px;
     gap: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     flex-direction: column;
   }
   .course-detail__feature-item + .course-detail__feature-item {
@@ -2688,8 +2702,7 @@ img.pc-only {
     margin-top: 40px;
   }
   .voice__col {
-    width: 100%;
-    gap: 20px;
+    display: contents;
   }
   .voice__item {
     flex-direction: column;
@@ -2699,6 +2712,21 @@ img.pc-only {
     max-width: 330px;
     margin: 0 auto;
     width: 100%;
+  }
+  .voice__item--01 {
+    order: 1;
+  }
+  .voice__item--02 {
+    order: 2;
+  }
+  .voice__item--03 {
+    order: 3;
+  }
+  .voice__item--04 {
+    order: 4;
+  }
+  .voice__item--05 {
+    order: 5;
   }
   .voice__icon-wrap {
     flex-shrink: 0;
@@ -2823,6 +2851,9 @@ img.pc-only {
   .school__td--name {
     font-size: 24px;
     margin-bottom: 0;
+  }
+  .school__td--name-small {
+    font-size: 21px;
   }
   .school__td--address {
     font-size: 16px;
